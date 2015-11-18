@@ -1,0 +1,35 @@
+{
+  "name": "ng-sal",
+  "version": "0.0.1",
+  "homepage": "https://github.com/lennonjesus/ng-sal/",
+  "authors": [
+    "Lennon Jesus <lennon.jesus@gmail.com>"
+  ],
+  "description": "Simple AngularJS Login",
+  "keywords": [
+    "authentication",
+    "login",
+    "angularjs",
+    "directive"
+  ],
+  "license": "MIT",
+  "main": [
+      "./main.js"
+  ],
+  "ignore": [
+    "example",
+    "bower_components",
+    "node_modules",
+    "**/.*",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.2.28",
+    "angular-http-auth": "1.2.1",
+    "angular-base64": "2.0.3"
+  },
+  "devDependencies": {
+
+  }
+}
