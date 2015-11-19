@@ -1,7 +1,9 @@
 (function () {
   'use strict';
 
-  angular.module('ng-sal').controller('loginController', ['$scope', 'loginService', 'authService', '$document', '$sanitize','$base64', loginController]);
+  angular.module('ng-sal').controller('loginController', loginController);
+
+  loginController.$inject = ['$scope', 'loginService', 'authService', '$document', '$sanitize','$base64'];
 
   function loginController ($scope, loginService, authService, $document, $sanitize,$base64) {
 

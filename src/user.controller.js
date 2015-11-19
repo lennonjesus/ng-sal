@@ -1,7 +1,9 @@
 (function () {
   'use strict';
 
-  angular.module('ng-sal').controller('userController', ['$scope', 'loginService', '$document', userController]);
+  angular.module('ng-sal').controller('userController', userController);
+
+  userController.$inject = ['$scope', 'loginService', '$document'];
 
   function userController ($scope, loginService) {
 

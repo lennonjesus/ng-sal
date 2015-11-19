@@ -1,7 +1,9 @@
 (function () {
   'use strict';
 
-  angular.module('ng-sal').factory('loginService', ['$resource', 'authService', '$rootScope', 'ngsalConfig', loginService]);
+  angular.module('ng-sal').factory('loginService', loginService);
+
+  loginService.$inject = ['$resource', 'authService', '$rootScope', 'ngsalConfig'];
 
   function loginService ($resource, authService, $rootScope, ngsalConfig) {
       var service = $resource('/' + ngsalConfig.applicationName + '/api/authentication', {

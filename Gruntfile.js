@@ -5,52 +5,34 @@ module.exports = function (grunt) {
 
   require('load-grunt-tasks')(grunt);
 
-  grunt.loadNpmTasks('grunt-contrib-concat');
+  //grunt.loadNpmTasks('grunt-contrib-concat');
 
   initConfig = {
 
-    /*uglify: {
+    uglify: {
       options: {
         preserveComments: 'some',
-        beautify : true,
+        beautify : false,
         mangle   : true
       },
       build: {
         files: {
           'dist/ng-sal.min.js': [
-            'main.js',
-            'constant.config.js',
-            'login.service.js',
-            'login.controller.js',
-            'user.controller.js',
-            'login-panel.directive.js',
-            'authenticated-application.directive.js',
-            'user-panel.directive.js'
+            'src/main.js',
+            'src/constant.config.js',
+            'src/login.service.js',
+            'src/login.controller.js',
+            'src/user.controller.js',
+            'src/login-panel.directive.js',
+            'src/authenticated-application.directive.js',
+            'src/user-panel.directive.js'
           ]
         }
       }
-    },*/
-    concat: {
-      options: {
-        separator: ';',
-      },
-      dist: {
-        src: [
-          'main.js',
-          'constant.config.js',
-          'login.service.js',
-          'login.controller.js',
-          'user.controller.js',
-          'login-panel.directive.js',
-          'authenticated-application.directive.js',
-          'user-panel.directive.js'
-        ],
-        dest: 'dist/ng-sal.min.js',
-      },
     }
   };
 
-  //grunt.registerTask('uglify', ['uglify:build']);
+  grunt.registerTask('build', ['uglify:build']);
 
   grunt.initConfig(initConfig);
 
