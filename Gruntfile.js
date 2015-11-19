@@ -13,7 +13,7 @@ module.exports = function (grunt) {
       options: {
         preserveComments: 'some',
         beautify : false,
-        mangle   : true
+        mangle   : false
       },
       build: {
         files: {

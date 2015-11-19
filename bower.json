@@ -14,7 +14,7 @@
   ],
   "license": "MIT",
   "main": [
-      "./main.js"
+      "./dist/ng-sal.min.js"
   ],
   "ignore": [
     "example",
