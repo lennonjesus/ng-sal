@@ -52,6 +52,7 @@ Insira as diretivas nos locais em que desejar
 
 ###### TODO
 - projeto de exemplo
+- gulp
 - i18n
 - documentação (en|pt_BR)
 - testes

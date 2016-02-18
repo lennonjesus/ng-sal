@@ -47,8 +47,10 @@ Put the ng-sal directives wherever you want
 <!-- protected area -->
 <body authenticated-application>
 ```
+
 ###### TODO
 - example project
+- gulp
 - i18n
 - documentation (en|pt_BR)
 - tests
