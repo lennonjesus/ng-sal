@@ -69,6 +69,7 @@
           if (!currentUser) currentUser = {username: data.username, permissions: {}, userDetails: {}};
           currentUser.userDetails = data.userDetails;
           currentUser.permissions = data.permissions;
+          $rootScope.currentUser = currentUser;
           $rootScope.$broadcast('event:userDetailsPrepared');
       };
 
