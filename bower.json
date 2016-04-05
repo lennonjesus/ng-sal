@@ -1,6 +1,6 @@
 {
   "name": "ng-sal",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/lennonjesus/ng-sal/",
   "authors": [
     "Lennon Jesus <lennon.jesus@gmail.com>"
@@ -27,7 +27,8 @@
   "dependencies": {
     "angular": "^1.2.28",
     "angular-http-auth": "1.2.1",
-    "angular-base64": "2.0.3"
+    "angular-base64": "2.0.3",
+    "angular-ui-router": "~0.2.15"
   },
   "devDependencies": {
 
