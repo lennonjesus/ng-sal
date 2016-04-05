@@ -3,7 +3,7 @@ Simple AngularJS Login
 
 Idiomas: Português | [Inglês](README-en_US.md)
 
-Este projeto é um fork do projeto [sca-ngular](https://github.com/tagama/sca-ngular) do Thiago Gama's, com algumas melhorias:
+Este projeto é um fork do projeto [sca-ngular](https://github.com/tagama/sca-ngular) do Thiago Gama, com algumas melhorias:
 
 - [Angular Style](https://github.com/johnpapa/angular-styleguide)
 - Código minificado (com Grunt Uglify)
