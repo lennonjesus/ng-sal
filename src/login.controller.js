@@ -3,16 +3,16 @@
 
   angular.module('ng-sal').controller('loginController', loginController);
 
-  loginController.$inject = ['$scope', 'loginService', 'authService', '$document', '$sanitize','$base64'];
+  loginController.$inject = ['$scope', 'loginService', 'authService', '$document', '$sanitize'];
 
-  function loginController ($scope, loginService, authService, $document, $sanitize,$base64) {
+  function loginController ($scope, loginService, authService, $document, $sanitize) {
 
       $scope.authenticationError = false;
 
       function sanitizeCredentials() {
           return {
               username: $sanitize($scope.username),
-              password: $base64.encode($sanitize($scope.password)),
+              password: btoa(unescape(encodeURIComponent($scope.password))),
               ignoreAuthModule: 'ignoreAuthModule'
           };
       }
