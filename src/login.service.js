@@ -6,7 +6,7 @@
   loginService.$inject = ['$resource', 'authService', '$rootScope', 'ngsalConfig'];
 
   function loginService ($resource, authService, $rootScope, ngsalConfig) {
-      var service = $resource('/' + ngsalConfig.applicationName + '/api/authentication', {
+      var service = $resource('/' + ngsalConfig.applicationName + '/api/' + ngsalConfig.apiVersion + '/authentication', {
           'username': '@username',
           'password': '@password'
       }, {
@@ -18,24 +18,24 @@
           },
           'logoutApi': {
               method: 'GET',
-              url: '/' + ngsalConfig.applicationName + '/api/logout',
+              url: '/' + ngsalConfig.applicationName + '/api/' + ngsalConfig.apiVersion + '/logout',
               isArray: true,
               ignoreAuthModule: 'ignoreAuthModule'
           },
           'authenticate': {
               method: 'GET',
-              url: '/' + ngsalConfig.applicationName + '/api/authenticate',
+              url: '/' + ngsalConfig.applicationName + '/api/' + ngsalConfig.apiVersion + '/authenticate',
               isArray: false,
               ignoreAuthModule: 'ignoreAuthModule'
           },
           'user': {
               method: 'GET',
-              url: '/' + ngsalConfig.applicationName + '/api/user',
+              url: '/' + ngsalConfig.applicationName + '/api/' + ngsalConfig.apiVersion + '/user',
               isArray: false
           },
           'goToPerfil': {
               method: 'GET',
-              url: '/' + ngsalConfig.applicationName + '/api/goToPerfil/:codigo',
+              url: '/' + ngsalConfig.applicationName + '/api/' + ngsalConfig.apiVersion + '/goToPerfil/:codigo',
               params: {codigo: '@codigo'},
               isArray: false
           }

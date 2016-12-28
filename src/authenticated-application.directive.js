@@ -3,6 +3,8 @@
 
   angular.module('ng-sal').directive('authenticatedApplication', authenticatedApplication);
 
+  authenticatedApplication.$inject = ['loginService', '$document', '$location'];
+
   function authenticatedApplication (loginService, $document, $location) {
       return {
           restrict: 'A',
