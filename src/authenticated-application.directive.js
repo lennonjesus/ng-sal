@@ -3,9 +3,9 @@
 
   angular.module('ng-sal').directive('authenticatedApplication', authenticatedApplication);
 
-  authenticatedApplication.$inject = ['loginService', '$document', '$location'];
+  authenticatedApplication.$inject = ['loginService', '$document', '$location', 'permissionService'];
 
-  function authenticatedApplication (loginService, $document, $location) {
+  function authenticatedApplication (loginService, $document, $location, permissionService) {
       return {
           restrict: 'A',
           link: function (scope, elem, attrs) {
@@ -31,8 +31,11 @@
               scope.$on('event:userLogout', function () {
                   scope.isAuthenticated = false;
               });
+              scope.hasPermission = function(resource){
+                  return permissionService.hasPermission(resource);
+              };
           }
-      }
+      };
   }
 
 })();
