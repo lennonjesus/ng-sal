@@ -10,13 +10,7 @@ gulp.task('default', function () {
 gulp.task('build', function(callback) {
   return gulp.src([
     'src/main.js',
-    'src/constant.config.js',
-    'src/login.service.js',
-    'src/login.controller.js',
-    'src/user.controller.js',
-    'src/login-panel.directive.js',
-    'src/authenticated-application.directive.js',
-    'src/user-panel.directive.js'
+    'src/**/!(main.js)*.js',        
   ])
   .pipe(sourcemaps.init())
   .pipe(concat('ng-sal.min.js'))

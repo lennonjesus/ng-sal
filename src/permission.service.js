@@ -1,11 +1,11 @@
 (function () {
   'use strict';
 
-  angular.module('ng-sal').factory('permissionService', permissionService,secureResource);
+  angular.module('ng-sal').factory('permissionService', permissionService);
 
   permissionService.$inject = ['loginService','secureResource'];
 
-  function permissionService (loginService) {
+  function permissionService (loginService,secureResource) {
 
     var service = {
         hasPermission : hasPermission
